@@ -1,0 +1,6 @@
+steps:
+  - uses: actions/checkout@v2
+  - name: Checkout code
+    run: |
+      yarn install
+      yarn build

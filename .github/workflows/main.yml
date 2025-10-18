@@ -1,1 +1,24 @@
-
+name: CI
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: "Log level"
+        required: true
+        default: "warning"
+      tags:
+        description: "Test scenarios tags"
+  schedule:
+    - cron: "0 8 * * SAT"
+jobs:
+  build:
+    name: Build Project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./actions/checkout
+        with:
+          MY_NAME: "Michael"
