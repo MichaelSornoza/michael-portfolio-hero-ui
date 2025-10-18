@@ -1,11 +1,10 @@
-import React from "react";
 import { Image } from "@heroui/image";
 
 import { subtitle, title } from "../primitives";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-around gap-8">
+    <section className="flex flex-col md:flex-row items-center justify-around gap-8 h-full">
       <div className="">
         <Image
           isBlurred
